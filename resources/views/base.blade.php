@@ -40,7 +40,17 @@ $route = request()->route()->getName();
     </nav>
 
     <div class="container">
+
         @yield('content')
+
+
     </div>
 </body>
+<footer>
+    @if (@session('success'))
+    <alert class="alert alert-success">
+        {{ session('success') }}
+    </alert>
+    @endif
+</footer>
 </html>
